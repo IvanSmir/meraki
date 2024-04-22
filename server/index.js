@@ -7,7 +7,11 @@ const dotenv = require("dotenv").config();
 
 app.use(cookieParser());
 
-const allowedOrigins = ["http://localhost:5173", "http://192.168.100.204:5173"];
+const allowedOrigins = [
+  "http://localhost:5173",
+  "http://192.168.100.204:5173",
+  process.env.FRONTEND_URL,
+];
 app.use(
   cors({
     origin: function (origin, callback) {
