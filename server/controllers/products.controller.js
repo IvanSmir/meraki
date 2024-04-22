@@ -9,7 +9,6 @@ module.exports = {
       const body = req.body;
 
       const images = req.files;
-      console.log(images);
       const downloadUrls = [];
       for (const image of images) {
         const imagex = await uploadFile.uploadFile(image);

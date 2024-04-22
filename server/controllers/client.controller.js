@@ -6,7 +6,6 @@ module.exports = {
   addClient: async (req, res) => {
     try {
       const body = req.body;
-      console.log(body);
       const image = req.files?.image || null;
       let downloadUrl = "https://www.gravatar.com/avatar";
       if (image && image?.length > 0) {

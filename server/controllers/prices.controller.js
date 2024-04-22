@@ -70,7 +70,7 @@ module.exports = {
       const ClientProductPrices = await Promise.all(
         prices.map(async (price) => {
           const product = await ProductModel.findById(price.productId);
-          console.log(product);
+         
           return {
             ...price.toObject(),
             nombre: product?.nombre,
@@ -88,7 +88,6 @@ module.exports = {
   getClientPricesByNumber: async (req, res) => {
     try {
       const { clientNumber } = req.params;
-      console.log(clientNumber);
       const client = await ClientModel.findOne({ telefono: clientNumber });
       if (client === null) {
         res.status(404);
