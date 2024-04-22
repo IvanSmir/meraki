@@ -71,7 +71,7 @@ export const ProductPage = () => {
                         Tallas: obtenerTalas(data.tallas),
                         Medidas: data.medidas,
                         Ajuste: data.ajuste,
-                        Cuidados: data.cuidado,
+                        Cuidados: data.cuidados,
                     }
                 })
 
