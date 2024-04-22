@@ -68,6 +68,8 @@ module.exports = {
       const userToken = jwt.sign(payload, process.env.SECRET_KEY);
       res.cookie("usertoken", userToken, {
         httpOnly: true,
+        sameSite: "None",
+        secure: true,
       });
       res.status(200);
       res.json({
