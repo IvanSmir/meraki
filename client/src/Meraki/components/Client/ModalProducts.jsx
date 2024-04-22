@@ -60,7 +60,7 @@ export const ModalProducts = ({ product, handleClose, open, price, setPrice, est
                         Precio: {price}
                     </Typography>
                     <Typography variant="h6" component="h2" sx={{ textAlign: 'center', mb: 2 }}>
-                        Estado: {estado ? 'En proceso' : 'Listo'}
+                        Estado: {estado ? 'Listo' : 'En proceso'}
                     </Typography>
                 </Box>
             </Modal>
